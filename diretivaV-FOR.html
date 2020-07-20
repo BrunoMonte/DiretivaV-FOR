@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretiva Model</title>
+</head>
+
+    
+<body>
+    <div id="app">  
+        <!--<div v-for="img in img" >    
+        <img :src= "img" width="100px"/>
+        </div> -->
+
+        <!--<p v-for="(fruta,index) in frutas" >
+            {{index}} - {{fruta.nome}} / {{fruta.cor}}
+        </p> -->
+        <ul>
+            <li v-for= "(value, key, index) in cadastro">
+                   {{index}} - {{key}} : {{value}}     <!--A posição, a chave, e o valor dentro dessa chave-->
+            </li>
+        </ul>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!--Primeiro carrega comando, após faz script-->
+
+    <script>
+        new Vue ({          
+            
+            el: '#app',    
+            data:{              
+                img: ['bruno1.png', 
+                        'bruno2.png', 
+                            'bruno3.png',],
+                frutas: [   
+                         { nome:  'pera', cor:'roxo'},
+                         { nome:  'uva', cor:'verde'},
+                         { nome:  'banana', cor:'amarelo'}, ],
+            
+                cadastro:{
+                    Nome: 'Bruno',
+                    Sobrenome: 'Aguiar',
+                    Tel: '6354165',
+                    email:'bruno@bruno',
+                }
+            
+            }
+            
+        })
+
+
+    </script>
+
+    
+</body>
+</html>
